@@ -16,7 +16,6 @@ jobs:
         uses: ./
         with:
           token: ${{ secrets.SECURITY_TOKEN }}
-          sarifReportDir: ./samples/sarif/java/detailed
           outputDir: .
           repository: octodemo/ghas-reporting
 
