@@ -31,6 +31,10 @@ inputs:
     required: true
     default: ${{ github.sha }}
 
+  https_proxy:
+    description: An optional explicit proxy to use for accessing the GitHub API. Will fall back to environment variables for the proxy if this is not set and one of HTTPS_PROXY, HTTP_PROXY or lower case equivalents are present.
+    required: false
+
 runs:
   using: node16
   main: dist/index.js
