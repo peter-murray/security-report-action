@@ -6,12 +6,12 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
-    
+
       - name: Checkout Sources
-        uses: actions/checkout@v2
-          
+        uses: actions/checkout@v4
+
       - name: Invoke Action
         uses: ./
         with:
@@ -19,9 +19,9 @@ jobs:
           sarifReportDir: ./samples/sarif/java/detailed
           outputDir: .
           repository: octodemo/ghas-reporting
-          
+
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: reports
           path: ./*.pdf

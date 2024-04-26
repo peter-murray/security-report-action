@@ -16,13 +16,13 @@ jobs:
             type: windows-x64
 
     runs-on: ${{ matrix.os }}
-    
+
     steps:
       - name: Checkout Sources
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: 12
 
@@ -36,7 +36,7 @@ jobs:
         run: npm pack
 
       - name: Attach artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: github-security-report-bundle-${{ matrix.type }}
           path: github-security-report.zip

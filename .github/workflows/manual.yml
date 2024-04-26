@@ -6,21 +6,21 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
-    
+
       - name: Checkout Sources
-        uses: actions/checkout@v2
-          
+        uses: actions/checkout@v4
+
       - name: Invoke Action
         uses: ./
         with:
           token: ${{ secrets.SECURITY_TOKEN }}
           sarifReportDir: ./samples/sarif/peter-murray/advanced-security-java
           outputDir: .
-          
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
         with:
           name: reports
           path: ./*.pdf
