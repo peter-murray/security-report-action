@@ -1,0 +1,2 @@
+- name: GitHub Security Report Action
+  uses: peter-murray/github-security-report-action@v2

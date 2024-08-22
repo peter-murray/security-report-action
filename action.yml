@@ -1,4 +1,4 @@
-name: GitHub Security Report Action
+name: GitHub Security Shield
 description: Generates security reports for a GitHub repository
 author: Peter Murray
 
